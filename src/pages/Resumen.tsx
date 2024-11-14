@@ -6,13 +6,6 @@ import Pdf from '../assets/CV_MerwilVegas.pdf';
 import { Document, Page } from 'react-pdf';
 import { useEffect, useState } from 'react';
 import React from 'react';
-import Footer from '../layouts/Footer'
-
-// const pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-// console.log(Pdf);
-
-
 
 export const Resumen = () => {
     const [width, setWidth] = useState(window.innerWidth);
@@ -64,39 +57,18 @@ export const Resumen = () => {
                 // borderBottomWidth={width <= 240? "4px" : "0"}
                 
             >
-                {/* <Document
-                    file={Pdf}
-                    onLoadSuccess={onDocumentLoadSuccess}
-                >
-                    <Page pageNumber={pageNumber} />
-                </Document> */}
+             
                 <iframe 
                     src={Pdf}                    
                     height="650"
-                    width="100%"
-                   
+                    width="100%"                  
                     
                 ></iframe>
-                {/* <Box mt={4}>
-                    <Button
-                        onClick={() => setPageNumber(prevPageNumber => prevPageNumber - 1)}
-                        disabled={pageNumber <= 1}
-                    >
-                        Anterior
-                    </Button>
-                    <span>{pageNumber} de {numPages}</span>
-                    <Button
-                        onClick={() => setPageNumber(prevPageNumber => prevPageNumber + 1)}
-                        disabled={pageNumber >= numPages}
-                    >
-                        Siguiente
-                    </Button>
-                </Box> */}
+              
             
-            </Box>            
-
+            </Box>
         </Flex>
-        <Footer/>
+
     </>
   )
 }
